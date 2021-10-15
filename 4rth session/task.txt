@@ -1,0 +1,100 @@
+Task 2
+addi x5, x0, 3 #x5=x
+addi x6, x0, 7 #x6=y
+add x7, x0, x5 #x7=temp
+add x8, x0, x6 #x8=temp
+add x6, x0, x7 #y=3
+add x5, x0, x8 #x=7
+
+
+
+Task 3
+addi x5, x0, 3 #x5=x
+slli x5, x5, 2 #shift left logical shift the number to left side
+
+
+
+Task 4
+addi x5, x0, 2 #x5=x
+addi x6, x0, 8 #x6=y
+addi x7, x0, 3
+sub x8, x6, x5 #z=y-x
+sll x5, x5, x7 #shift left logical shift the number to left side
+add x9, x5, x6 #p=8x+y
+
+
+
+
+Task 5#LOOP
+li t0, 0
+li t1, 10
+
+LOOP:
+
+addi t3, t4, 1
+addi t0, t0, 1
+
+bne t0, t1, LOOP
+
+END:
+
+
+
+Task 6
+li x5, 3 #a
+li x6, 2 #b
+li x7, 4 #c
+li x8, 0
+li x9, 10
+loop:
+bgt x5, x6 label1
+add x6, x5, x7
+#beq x0, x0, end
+addi x8, x8, 1
+bne x8, x9, loop
+beq x0, x0, end
+label1:
+add x5, x6, x7
+end:
+
+
+
+
+
+li x5, 3 #a
+li x6, 2 #b
+li x7, 4 #c
+li x8, 0
+li x9, 10
+loop:
+addi x8, x8, 1
+bgt x5, x6 label1
+add x6, x5, x7
+beq x0, x0, end
+label1:
+add x5, x6, x7
+end:
+bne x8, x9, loop
+beq x0, x0, loopend
+loopend:
+
+
+
+
+
+li x5, 3 #a
+li x6, 2 #b
+li x7, 4 #c
+li x8, 0
+li x9, 10
+loop:
+addi x8, x8, 1
+bgt x5, x6 label1
+add x6, x5, x7
+beq x0, x0, end
+label1:
+add x5, x6, x7
+end:
+bne x8, x9, loop
+beq x0, x0, loopend
+loopend:
